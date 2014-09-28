@@ -27,17 +27,10 @@
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-52572507-1', 'auto');
-            ga('send', 'pageview');
-        </script>
-		<!-- Favicons
-		================================================== -->
+        <![endif]-->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+        <!-- Favicons
+        ================================================== -->
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{{ asset('assets/ico/apple-touch-icon-144-precomposed.png') }}}">
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{{ asset('assets/ico/apple-touch-icon-114-precomposed.png') }}}">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{{ asset('assets/ico/apple-touch-icon-72-precomposed.png') }}}">
@@ -69,25 +62,49 @@
                 </div>
                 <div id="footer">
                     <div class="container">
-                        Seller Signup
-                        <ul>
-                            <li><a href="/seller/signup">Signup</a></li>
-                            <li><a href="/seller/login">Login</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="/about">About</a></li>
-                            <li><a href="/contact">Contact</a></li>
-                        </ul>
+                        <div class="row">
+                        <div class="col-xs-12 col-sm-3">
+                            <h5>Support Us</h5>
+                            <ul>
+                                <li><span class="fa fa-facebook"></span></li>
+                                <li><span class="fa fa-linkedin"></span></li>
+                                <li><span class="fa fa-twitter"></span></li>
+                                <a href="#">Contact Us</a>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-sm-3">
+                            <h5>Company</h5>
+                            <ul>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/contact">Terms & Privacy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-sm-3">
+                            <h5>Fiance-To-Be</h5>
+                            <ul>
+                                <li><a href="/signup">Signup</a></li>
+                                <li><a href="/user/login">Login</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-sm-3">
+                            <h5>Jewelers</h5>
+                            <ul>
+                                <li><a href="/seller-signup">Signup</a></li>
+                                <li><a href="/user/login">Login</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 		</div>
 
 
-		<!-- Javascripts
+		<!-- Javascripts TODO: Need to download them and all assets to be relative for ssl cert
 		================================================== -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script src="{{asset('assets/js/wheatandwildflower-cms.js')}}"></script>
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+            <script src="{{asset('assets/js/vendor/bootstrap-datetimepicker.js')}}"></script>
+            <script src="{{asset('assets/js/wheatandwildflower-cms.js')}}"></script>
+
         @yield('scripts')
 	</body>
 </html>

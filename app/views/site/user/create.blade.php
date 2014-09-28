@@ -48,10 +48,16 @@
 
     <fieldset class="form-step row">
         <h2 class="fs-title">Step 2: Basics and Timeline</h2>
-        <input type="datetime" name="date" placeholder="date" />
+        <div class='input-group date' class='datetimepicker'>
+            <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+        </div>
         <input type="text" name="zipcode" placeholder="zip code" />
-        <input type="text" name="lowerprice" placeholder="lower"/>
-        <input type="text" name="upperprice" placeholder="upper"/>
+        <label for="amount">Price range:</label>
+        <input type="text" id="amount" readonly>
+        <div id="slider-range"></div>
         <input type="button" name="next" class="next action-button" value="Next Step" />
     </fieldset>
 
