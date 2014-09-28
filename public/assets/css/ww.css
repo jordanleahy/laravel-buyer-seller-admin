@@ -1,0 +1,159 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic");
+@import url("http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic");
+/**loading custom fonts**/
+/** Media Query breakpoints**/
+/**Branding**/
+/**Fonts**/
+/**Social Variables**/
+body {
+  margin-top: 70px;
+  font-family: sans-serif;
+}
+a {
+  color: #000;
+}
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+a:visited {
+  color: #000;
+}
+h2 {
+  font-size: 1.3em;
+}
+h3 {
+  font-size: 1.2em;
+}
+.navbar {
+  background-color: #0d2739;
+  text-align: center;
+  margin-bottom: 0px;
+  border-bottom: 1px solid;
+}
+.navbar .navbar-nav li a {
+  color: #fff;
+}
+.navbar .container-fluid {
+  max-width: 1000px;
+  text-align: center;
+  margin: auto;
+}
+.navbar .navbar-brand {
+  text-align: center;
+  font-size: 1.2em;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.content {
+  max-width: 992px;
+  margin: auto;
+}
+.content img {
+  width: 100%;
+}
+#footer {
+  background-color: #0d2739;
+  color: #fff;
+}
+#footer a {
+  color: #fff;
+}
+/*form styles*/
+#lead-gen {
+  text-align: center;
+  position: relative;
+}
+#lead-gen fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+}
+#lead-gen fieldset:not(:first-of-type) {
+  display: none;
+}
+#lead-gen input,
+#lead-gen textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  color: #2C3E50;
+  font-size: 13px;
+}
+#lead-gen .action-button {
+  width: 100px;
+  background: #f58a69;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+/*headings*/
+.fs-title {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #2C3E50;
+  margin-bottom: 10px;
+}
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+#progressbar li {
+  list-style-type: none;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 33.33%;
+  float: left;
+  position: relative;
+}
+#progressbar li span {
+  font-weight: bold;
+}
+#progressbar li :before {
+  width: 20px;
+  line-height: 20px;
+  display: block;
+  font-size: 10px;
+  color: #333;
+  background: white;
+  border-radius: 3px;
+  margin: 0 auto 5px auto;
+}
+#progressbar li :after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+}
+#progressbar li :first-child:after {
+  /*connector not needed before the first step*/
+  content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,
+#progressbar li.active:after {
+  color: white;
+}

@@ -1,0 +1,160 @@
+@CHARSET "ISO-8859-1";
+body {
+    background-color: #f4f3ea;
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+}
+a {
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #999999;
+}
+.navbar-inverse {
+    background-color: #daae38;
+    border: none;
+}
+
+#logo {
+	text-align: center;
+}
+
+#logo img {
+    height: 15px;
+}
+
+#logo-large {
+    display: none;
+    text-align: center;
+}
+#logo-large img{
+    height: 60px;
+}
+
+@media (min-width: 768px) {
+    #logo {
+        display: none;
+    }
+    #logo-large {
+        display: block;
+    }
+}
+
+.navbar .container .logo a img{
+	height: 15px;
+}
+
+.navbar-toggle {
+	position: absolute;
+	top: 0;
+	left: 5px;
+}
+
+.thumbnail {
+	border: none;
+	box-shadow: none;
+    margin-bottom: 0px;
+    padding:0px;
+}
+.post {
+    text-align: center;
+}
+.post a {
+    color: #fff;
+}
+
+.post-title {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    margin: 0 auto;
+ }
+
+
+.glyphicon-heart {
+    color: #f3ae76;
+    padding-right: 5px;
+}
+.post-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-gradient(
+        linear,
+        right top,
+        right bottom,
+        color-stop(0.60, transparent),
+        color-stop(0.97, #000)
+    );
+    background-image: -o-linear-gradient(bottom, transparent 60%, #000 97%);
+    background-image: -moz-linear-gradient(bottom, transparent 60%, #000 97%);
+    background-image: -webkit-linear-gradient(bottom, transparent 60%, #000 97%);
+    background-image: -ms-linear-gradient(bottom, transparent 60%, #000 97%);
+    background-image: linear-gradient(to bottom, transparent 60%, #000 97%);
+}
+
+.post:hover .post-title  {
+    transform: translate(0,-50px);
+    -webkit-transform: translate(0,-50px);
+    -o-transform: translate(0,-50px);
+    -moz-transform: translate(0,-50px);
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out; /** Chrome & Safari **/
+    -moz-transition: all .2s ease-in-out; /** Firefox **/
+    -o-transition: all .2s ease-in-out; /** Opera **/
+}
+
+.post .post-title {
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out; /** Chrome & Safari **/
+    -moz-transition: all .2s ease-in-out; /** Firefox **/
+    -o-transition: all .2s ease-in-out; /** Opera **/
+}
+
+.post:hover .post-title a{
+    color: #fff
+}
+
+.post:hover .post-gradient{
+    background-image: -webkit-gradient(
+        linear,
+        right top,
+        right bottom,
+        color-stop(0.10, transparent),
+        color-stop(0.97, #000)
+    );
+    background-image: -o-linear-gradient(bottom, transparent 10%, #000 97%);
+    background-image: -moz-linear-gradient(bottom, transparent 10%, #000 97%);
+    background-image: -webkit-linear-gradient(bottom, transparent 10%, #000 97%);
+    background-image: -ms-linear-gradient(bottom, transparent 10%, #000 97%);
+    background-image: linear-gradient(to bottom, transparent 10%, #000 97%);
+}
+
+.post-header {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    color: #fff;
+    opacity:0;
+    transition:visibility 0s linear 0.2s,opacity 0.2s linear;
+}
+
+.post-category {
+    font-style: italic;
+    font-family: 'Droid Serif', serif;
+}
+.favs a{
+    color: #fff;
+}
+
+
+.post:hover .post-header {
+    visibility:visible;
+    opacity:1;
+    transition-delay:0s;
+}
