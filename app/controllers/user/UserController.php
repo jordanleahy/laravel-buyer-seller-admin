@@ -36,10 +36,13 @@ class UserController extends BaseController {
      * Stores new user
      *
      */
-    public function postIndex()
+    public function postCreate()
     {
+        return Redirect::to('search');
+
         $this->user->username = Input::get( 'username' );
         $this->user->email = Input::get( 'email' );
+        $role = Input::get('role');
 
         $password = Input::get( 'password' );
         $passwordConfirmation = Input::get( 'password_confirmation' );
@@ -64,9 +67,16 @@ class UserController extends BaseController {
 
         // Save if valid. Password field will be hashed before save
         $this->user->save();
+        if($role && $role == "seller") {
+            $role_id = 3;
+        } else {
+            $role_id = 2;
+        }
 
         if ( $this->user->id )
         {
+            //add user role
+
             // Redirect with success message, You may replace "Lang::get(..." for your custom message.
             return Redirect::to('user/login')
                 ->with( 'notice', Lang::get('user/user.user_account_created') );
@@ -143,6 +153,15 @@ class UserController extends BaseController {
     public function getCreate()
     {
         return View::make('site/user/create');
+    }
+
+    /**
+     * Displays the form for user creation
+     *
+     */
+    public function getCreateSeller()
+    {
+        return View::make('site/user/create-seller');
     }
 
 

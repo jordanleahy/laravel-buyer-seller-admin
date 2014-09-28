@@ -10,9 +10,9 @@ class RolesTableSeeder extends Seeder {
         $adminRole->name = 'admin';
         $adminRole->save();
 
-        $buyerRole = new Role;
-        $buyerRole->name = 'buyer';
-        $buyerRole->save();
+        $userRole = new Role;
+        $userRole->name = 'user';
+        $userRole->save();
 
         $sellerRole = new Role;
         $sellerRole->name = 'seller';
@@ -21,11 +21,6 @@ class RolesTableSeeder extends Seeder {
         $user = User::where('username','=','admin')->first();
         $user->attachRole( $adminRole );
 
-        $user = User::where('username','=','user')->first();
-        $user->attachRole( $buyerRole );
-
-        $user = User::where('username','=','user')->first();
-        $user->attachRole( $sellerRole );
     }
 
 }

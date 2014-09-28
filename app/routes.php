@@ -93,6 +93,11 @@ Route::post('user/login', 'UserController@postLogin');
 # User RESTful Routes (Login, Logout, Register, etc)
 Route::controller('user', 'UserController');
 
+Route::get('signup', 'UserController@getCreate');
+Route::get('seller-signup', 'UserController@getCreateSeller');
+
+Route::get('search', 'SearchController@getIndex');
+
 //Pinterest
 Route::get('social/pinterest', 'SocialController@getPinterest');
 //Twitter
